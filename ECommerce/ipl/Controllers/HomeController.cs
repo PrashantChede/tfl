@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ipl.Models;
 using System.Collections.Generic;
+using HR;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -32,67 +33,59 @@ public class HomeController : Controller
         return View();
     }
 
-     public IActionResult Register()
+
+      List<Employee> employees= new List<Employee>();
+    string fileName=@"E:\CDAC_2022_sep\.NET\Practice\ccc.json";
+
+     public IActionResult Validate(string email, string password)
     {
-        return View();
-    }
 
-
-
-
-     public IActionResult Validate(string email,string password)
-    {
-        if(email=="abc@gmail.com" &&  password=="abc@123")
+        var data=System.IO.File.ReadAllText(fileName);
+        List<Employee> newEmp=JsonSerializer.Deserialize<List<Employee>>(data);
+        foreach(Employee e in newEmp)
         {
-            return Redirect ("Welcome");
+            if(e.Email==email  && e.Password==password)
+            {
+                return Redirect("MostWelcome");
+            }
         }
 
+
         return View();
     }
 
-     List<Object> players= new List<Object>();
-   
-     string fileName=@"E:\chaitanya_prashant\.Net\lab_dotnet\Day8\ECommerce\ppp.json";
 
-     public IActionResult Add(string firstname,string email,string password)
-    {
-
-        try{
-            string readData = System.IO.File.ReadAllText(fileName);
-            List<Object> jsonData = JsonSerializer.Deserialize<List<Object>>(readData);
-            players=jsonData;
-            players.Add(new { FirstName=firstname,Email=email,Password=password});
-            var produtsJson=JsonSerializer.Serialize<List<Object>>(players);
-            
-            
-            //Serialize all Flowers into json file
-
-        System.IO.File.WriteAllText(fileName,produtsJson);
-        
-   
-    }
-   catch(Exception exp){
     
-    }
 
-    return Redirect ("Welcome");
+    public IActionResult Add(string firstname,string email,string password)
+    {
+        string readData=System.IO.File.ReadAllText(fileName);
+        List<Employee> newList=JsonSerializer.Deserialize<List<Employee>>(readData);
+        employees=newList;
+    
+        Employee emp=new Employee(){FirstName=firstname,Email=email,Password=password};
+        employees.Add(emp);
+       var jsonData=JsonSerializer.Serialize<List<Employee>>(employees);
+        System.IO.File.WriteAllText(fileName,jsonData);
 
-
-
- if(email=="abc@gmail.com" &&  password=="abc@123")
-        {
-            return Redirect ("Welcome");
-        }
-
-
-
-
-
+    return Redirect("Welcome");
 
         return View();
     }
 
-     public IActionResult Welcome()
+
+
+    public IActionResult Register()
+    {
+        return View();
+    }
+
+    public IActionResult Welcome()
+    {
+        return View();
+    }
+
+    public IActionResult MostWelcome()
     {
         return View();
     }

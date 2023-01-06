@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWebApp", "HelloWebApp\HelloWebApp.csproj", "{B59F3214-BCE3-4422-85A5-520453E0E0A2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ipl", "ipl\ipl.csproj", "{E5B06E02-B354-4099-B4D3-B9CADF38FD12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ipl", "ipl\ipl.csproj", "{9A2B7974-1B18-47F1-AEE4-9E60444F12F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,17 +14,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B59F3214-BCE3-4422-85A5-520453E0E0A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B59F3214-BCE3-4422-85A5-520453E0E0A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B59F3214-BCE3-4422-85A5-520453E0E0A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B59F3214-BCE3-4422-85A5-520453E0E0A2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8610B280-8FE6-44D7-BB10-9CEE639B510F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8610B280-8FE6-44D7-BB10-9CEE639B510F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8610B280-8FE6-44D7-BB10-9CEE639B510F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8610B280-8FE6-44D7-BB10-9CEE639B510F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5B06E02-B354-4099-B4D3-B9CADF38FD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5B06E02-B354-4099-B4D3-B9CADF38FD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5B06E02-B354-4099-B4D3-B9CADF38FD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5B06E02-B354-4099-B4D3-B9CADF38FD12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A2B7974-1B18-47F1-AEE4-9E60444F12F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A2B7974-1B18-47F1-AEE4-9E60444F12F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A2B7974-1B18-47F1-AEE4-9E60444F12F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A2B7974-1B18-47F1-AEE4-9E60444F12F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
